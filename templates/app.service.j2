@@ -13,6 +13,5 @@ WantedBy=multi-user.target
 
 [Service]
 Environment=PORT={{ app_port }}
-ExecStart=java -jar {{ app_dir }}/{{ app_file }} --server.port={{PORT}}
-User=userJavaApp
+ExecStart=java -jar {{ app_dir }}/{{ app_file }} --server.port={{ app_port }}
 Restart=always

@@ -3,7 +3,8 @@
   # TODO: change to remote if you have one
   hosts: local
   gather_facts: true
-
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
   tasks:
     # Use {{ aptcachetime }} variable to specify cache time
     # Find implementation in https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html#examples
@@ -11,11 +12,9 @@
       become: true
       apt:
       # TODO: Your code here
-        name: "{{ item }}"
+        pkg: "{{ packages }}"
         update_cache: yes
         cache_valid_time: "{{ aptcachetime }}"
-        state: present
-        loop: packages
 
     # Find implementation in https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html#examples
     - name: Enable Nginx service, ensure it is not masked and start it
@@ -81,8 +80,8 @@
       ansible.builtin.systemd:
       # TODO: Your code here
         name: sample.service
-        enabled: true
-        daemon_reload: true
+        enabled: yes
+        daemon_reload: yes
         state: started
         masked: no
 
@@ -119,4 +118,4 @@
       become: true
       ansible.builtin.systemd:
       # TODO: Your code here
-        daemon_reload: true
+        daemon_reload: yes
