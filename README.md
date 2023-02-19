@@ -8,15 +8,6 @@
 * It's better to have Ubuntu or other Debian-based linux (for other linux distros you will need to modify package installation commands)
 * Template works on localhost, but you can do it remotely on a server that is available through SSH by modifying [inventory](./inventory/hosts) (remote group) and [site.yml](./site.yml) (host variable)
 
-## Before tasks
-
-### If you have GitLab account
-Fork this project by clicking [https://gitlab.com/DmyMi/ansible-lab/-/forks/new](https://gitlab.com/DmyMi/ansible-lab/-/forks/new)
-### If you have GitHub account
-Follow this article [https://nira.com/how-to-migrate-from-gitlab-to-github/](https://nira.com/how-to-migrate-from-gitlab-to-github/) to copy the project to your Github.
-
-Doing the lab requires you to know how to use Git :)
-
 ## Tasks
 
 Write an Ansible playbook using the template in [site.yml](./site.yml).
