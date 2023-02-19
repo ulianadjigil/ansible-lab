@@ -47,6 +47,6 @@ ansible-playbook cleanup.yml
 ansible-playbook cleanup.yml -K
 ```
 
-## Submission
+## Result
 
-All i need is a link to your Github/Gitlab project in Classroom.
+<img width="1289" alt="Снимок экрана 2023-02-19 в 17 08 17" src="https://user-images.githubusercontent.com/85234616/219958029-90919518-5fd4-4923-bffa-0075bb579428.png">
